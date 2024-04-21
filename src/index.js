@@ -8,7 +8,7 @@ import merchants from './data/merchants.json';
 import transactions from './data/transactions.json';
 
 ReactDOM.render(
-    <App categories={categories} merchants={merchants} transactions={transactions} />,
+    <App categories={categories} merchants={merchants} transactionsData={transactions} />,
     document.getElementById("root")
 );
 

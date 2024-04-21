@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
-export const StyledSearchInput = styled.input`
+export const SearchWrapper = styled.div`
+  position: relative;
   flex: 1;
-  width: 30%;
-  padding: 10px 10px 10px 40px;
+`;
+
+export const StyledSearchInput = styled.input`
+  width: 800px;
+  padding: 8px 8px 8px 35px;
   font-size: 16px;
   border: 1px solid #dddddd;
   border-radius: 5px;
