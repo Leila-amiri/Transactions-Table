@@ -11,6 +11,7 @@ import {
 
 function TransactionsTable({ transactions, categories, merchants }) {
   const data = useTransactionData(transactions, categories, merchants);
+
   return (
     <StyledTable>
       <thead>
@@ -46,7 +47,7 @@ function TransactionsTable({ transactions, categories, merchants }) {
               <input type="checkbox" checked={transaction.receipt} readOnly />
             </StyledCell>
             <StyledCell>
-              <input type="checkbox" checked={transaction.billable} />
+              <input type="checkbox" checked={transaction.billable} readOnly />
             </StyledCell>
           </StyledRow>
         ))}

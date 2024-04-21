@@ -1,43 +1,42 @@
-## Installation
+# **Transaction Viewer Application**
 
-1) Clone this repo to your machine
-2) Run `npm install` to install the dependencies
-3) Run `npm start` to run the app in development mode
-4) Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Transaction Viewer Application provides a user-friendly interface for viewing and managing financial transaction data. This application highlights the use of modern React features and styled components to create a clean and efficient user interface.
 
-## Objective
-Finance managers use Weel to stay on top of their team's expenses. Your challenge is to implement Weel's new transaction table to make it easy for finance managers to see what’s happening at a simple glance.
+## **Features**
+- **Search Transactions**: Users can quickly filter transactions based on merchant names, categories, amounts, and more.
+- **View Transaction Details**: Each transaction's details such as status, date, merchant name, amount, and applicable taxes are neatly displayed.
+- **Interactive UI**: Responsive design for desktop and mobile views, ensuring accessibility and ease of use across devices.
 
-## Requirements
-- Please implement a transaction table that displays the provided data. You should have the following columns in your table:
-    - Status
-    - Date
-    - Merchant Name
-    - Team Member
-    - Category (dropdown list of category names)
-    - Amount
-    - GST
-    - Budget
-    - Receipt (read-only checkbox)
-    - Billable (checkbox)
+## **Components**
+This application consists of several key components:
 
-- Please implement a search feature that can take any input in the search bar and display any matching transactions in the table. Fields that should be searched are:
-    - Merchant Name
-    - Team Member
-    - Category Name
-    - Budget
-    - Amount
-    - GST   
+- **`App`**: The main component that initializes and renders the application layout and integrates other components.
+- **`TransactionsToolbar`**: Displays the search input and total transaction count, allowing users to filter the transactions displayed in real-time.
+- **`SearchInput`**: A reusable input component for handling the filtering of transactions based on user input.
+- **`TransactionsTable`**: Renders the transaction data in a tabulated format, showing various attributes of transactions.
+- **`Icon`**: A utility component for rendering SVG icons.
 
-- Approach this app like it would be used in production by customers and worked on by other developers.
-- It should be well structured, fully tested, work according to the requirements and have no bugs.
-- Feel free to re-organise the folders, make new modules, and refactor as you see fit.
-- The app should look appealing and be easy to use for finance managers.
-- We ask that you don't use any libraries not already provided in the package.json to implement the functionality as we want to see your raw coding ability.
+## **Hooks**
+To manage state and perform operations, the application utilizes custom React hooks:
 
-## Required effort
-You should spend about 4 hours on this challenge. We are interested in seeing your problem solving ability, the structure and robustness of your code and design skills. Your solution does not need to look perfect, but it must be fully tested and work according to the requirements without any bugs.
+- **`useSearch`**: Manages the search functionality, updating the list of transactions based on user input.
+- **`useTransactionData`**: Processes transaction data, formatting dates, and amounts appropriately for display.
 
-## Resources
-- Here is the documentation for [React Testing Library](https://testing-library.com/docs/react-testing-library/intro), which is the testing library used for this challenge.
-- All sample data has been provided for you.
+## **Utilities**
+Utility functions are used to handle data transformations:
+
+- **`getCategoryName`**: Resolves category names based on category IDs.
+- **`getMerchantName`**: Retrieves merchant names from a list of merchants using merchant IDs.
+- **`formatDate`**: Formats JavaScript date objects into a more human-readable string.
+- **`formatCurrency`**: Formats numerical values into a currency format.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- **Node.js**: This project was developed with Node.js version **16.20.2**.
+
+## **Setup Instructions**
+
+1. Clone the repository.
+2. Install dependencies: `npm install`
+4. Start the application: `npm start`
